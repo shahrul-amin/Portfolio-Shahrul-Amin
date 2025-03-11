@@ -22,14 +22,14 @@ const socialLinks = [
     {
       href: 'https://www.kaggle.com/shinn1',
       icon: <svg width="24" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="-10" y="-10" width="20" height="20" rx="4" ry="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" fill="none" transform="translate(12 12)"/>
+        <rect x="-10" y="-10" width="20" height="20" rx="4" ry="4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="4" fill="none" transform="translate(12 12)"/>
         <path 
             d="M18.825 23.859q-.034.14-.281.141h-3.139q-.28 0-.492-.248l-5.178-6.589-1.448 1.374v5.111q0 .352-.351.352H5.505q-.354 0-.354-.352V.353q0-.351.354-.353h2.431q.351.002.351.353v14.343l6.203-6.272q.247-.247.495-.246h3.239c.144 0 .236.06.285.18q.069.224-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358" 
             stroke="currentColor" 
-            stroke-width="1.5" 
-            stroke-linecap="butt" 
-            stroke-linejoin="miter" 
-            stroke-miterlimit="4" 
+            strokeWidth="1.5" 
+            strokeLinecap="butt" 
+            strokeLinejoin="miter" 
+            strokeMiterlimit="4" 
             fill="currentColor" 
             transform="matrix(.56 0 0 .56 5 5)"
         />
@@ -39,14 +39,14 @@ const socialLinks = [
     {
       href: 'https://www.figma.com/@shin30',
       icon: <svg width="24" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="-10" y="-10" width="20" height="20" rx="4" ry="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4" fill="none" transform="translate(12 12)"/>
+        <rect x="-10" y="-10" width="20" height="20" rx="4" ry="4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="4" fill="none" transform="translate(12 12)"/>
         <path 
             d="M14.5 11h-5A2.5 2.5 0 0 1 7 8.5h0A2.5 2.5 0 0 1 9.5 6h5A2.5 2.5 0 0 1 17 8.5h0a2.5 2.5 0 0 1-2.5 2.5M12 6H9.5A2.5 2.5 0 0 0 7 8.5h0A2.5 2.5 0 0 0 9.5 11H12Zm0 5H9.5A2.5 2.5 0 0 0 7 13.5h0A2.5 2.5 0 0 0 9.5 16H12Zm2.5 5a2.5 2.5 0 0 0 2.5-2.5h0a2.5 2.5 0 0 0-2.5-2.5h0a2.5 2.5 0 0 0-2.5 2.5h0a2.5 2.5 0 0 0 2.5 2.5M12 16H9.5A2.5 2.5 0 0 0 7 18.5h0A2.5 2.5 0 0 0 9.5 21H12Z" 
             stroke="currentColor" 
-            stroke-width="1.5" 
-            stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-miterlimit="4" 
+            strokeWidth="1.5" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeMiterlimit="4" 
             fill="none" 
             transform="matrix(.89 0 0 .89 1.32 -0.015)"
         />
@@ -63,12 +63,12 @@ const Contact = () => {
     >
         <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
             <div className="mb-12 lg:mb--0 lg:flex lg:flex-col">
-                <h2 className="headline-2 lg:max-w-[12cch]">
+                <h2 className="headline-2 lg:max-w-[12cch] reveal-up">
                     Contact me for collaboration
                 </h2>
 
                 <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]
-                lg:max-w-[30ch]">
+                lg:max-w-[30ch] reveal-up">
                     Reach out today to discuss your project needs and start collaborating on something amazing!
                 </p>
 
@@ -80,7 +80,7 @@ const Contact = () => {
                             target="_blank"
                             className="w-12 h-12 grid place-items-center ring-inset ring-2
                             ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-50
-                            hover:text-zinc-950 active:bg-zinc-50/80"
+                            hover:text-zinc-950 active:bg-zinc-50/80 reveal-up"
                         >
                             {icon}
                         </a>
@@ -97,7 +97,7 @@ const Contact = () => {
                     <div className="mb-4">
                         <label 
                             htmlFor="name" 
-                            className="label"
+                            className="label reveal-up"
                         >
                             Name
                         </label>
@@ -109,14 +109,14 @@ const Contact = () => {
                             autoComplete="name"
                             required
                             placeholder="Your Name" 
-                            className="text-field" 
+                            className="text-field reveal-up" 
                         />
                     </div>
 
                     <div className="mb-4">
                         <label 
                             htmlFor="email" 
-                            className="label"
+                            className="label reveal-up"
                         >
                             Email
                         </label>
@@ -128,7 +128,7 @@ const Contact = () => {
                             autoComplete="email"
                             required
                             placeholder="youremail@example.com" 
-                            className="text-field" 
+                            className="text-field reveal-up" 
                         />
                     </div>
                 </div>
@@ -136,7 +136,7 @@ const Contact = () => {
                 <div className="mb-4">
                     <label 
                         htmlFor="message" 
-                        className="label"
+                        className="label reveal-up"
                     >
                         Message
                     </label>
@@ -146,13 +146,13 @@ const Contact = () => {
                         id="message"
                         placeholder="Your message here..."
                         required 
-                        className="text-field resize-y min-h-32 max-h-80"
+                        className="text-field resize-y min-h-32 max-h-80 reveal-up"
                     ></textarea>
                 </div>
                 
                 <button 
                     type="submit" 
-                    className="btn btn-primary w-full !max-w-full justify-center"
+                    className="btn btn-primary w-full !max-w-full justify-center reveal-up"
                 >
                     Send Message
                 </button>
