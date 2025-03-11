@@ -36,7 +36,7 @@ const works = [
     {
       imgSrc: '/images/project-5.jpg',
       title: 'Top Pantry UI Design',
-      tags: ['Graphical User Interface (GUI)', 'User Interface Design', 'User Experience (UX)'],
+      tags: ['Graphical User Interface', 'User Interface Design', 'User Experience (UX)'],
       projectLink: 'https://www.figma.com/community/file/1396361792966880290/top-pantry'
     }
   ];  
