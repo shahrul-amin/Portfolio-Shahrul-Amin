@@ -7,6 +7,7 @@
  * Components
  */
 import { ButtonPrimary, ButtonOutline } from './Button'
+import { FaGithub } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -52,9 +53,10 @@ const Hero = () => {
                     />
 
                     <ButtonOutline 
-                        href="about"
-                        label="Scroll down"
-                        icon="arrow_downward"
+                        href="https://github.com/shahrul-amin"
+                        target='_blank'
+                        label="GitHub"
+                        icon={<FaGithub />}
                     />
                 </div>
             </div>
