@@ -23,9 +23,9 @@ const works = [
     },
     {
       imgSrc: './images/project-3.jpg',
-      title: 'Movie Review Classifier Using Naive Bayes',
-      tags: ['Artificial Intelligence (AI)', 'Machine Learning'],
-      projectLink: 'https://github.com/shahrul-amin/Movie-Review-Classifier-Naive-Bayes'
+      title: 'Porfolio Website using React',
+      tags: ['Web Development', 'ReactJS', 'Tailwind CSS'],
+      projectLink: 'https://github.com/shahrul-amin/Portfolio-Shahrul-Amin'
     },
     {
       imgSrc: './images/project-4.jpg',
