@@ -10,31 +10,31 @@ import ProjectCard from "./ProjectCard.jsx";
 
 const works = [
     {
-      imgSrc: '/images/project-1.jpg',
+      imgSrc: './images/project-1.jpg',
       title: 'Continual Object Detection',
       tags: ['Object Detection', 'PyTorch', 'Incremental Learning'],
       projectLink: 'https://github.com/shahrul-amin/Continual_Object_Detection'
     },
     {
-      imgSrc: '/images/project-2.jpg',
+      imgSrc: './images/project-2.jpg',
       title: 'Vehicle Counting Using YOLOv3 and SORT',
       tags: ['Computer Vision', 'YOLO', 'Deep Learning'],
       projectLink: 'https://github.com/shahrul-amin/Vehicle-Counting-Using-YOLOv3-and-SORT'
     },
     {
-      imgSrc: '/images/project-3.jpg',
+      imgSrc: './images/project-3.jpg',
       title: 'Movie Review Classifier Using Naive Bayes',
       tags: ['Artificial Intelligence (AI)', 'Machine Learning'],
       projectLink: 'https://github.com/shahrul-amin/Movie-Review-Classifier-Naive-Bayes'
     },
     {
-      imgSrc: '/images/project-4.jpg',
+      imgSrc: './images/project-4.jpg',
       title: 'Cookies World Website',
       tags: ['Web Development', 'Web Design', 'Databases'],
       projectLink: 'https://github.com/shahrul-amin/Cookies-World-Website'
     },
     {
-      imgSrc: '/images/project-5.jpg',
+      imgSrc: './images/project-5.jpg',
       title: 'Top Pantry UI Design',
       tags: ['Graphical User Interface', 'User Interface Design', 'User Experience (UX)'],
       projectLink: 'https://www.figma.com/community/file/1396361792966880290/top-pantry'

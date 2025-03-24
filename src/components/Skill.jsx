@@ -10,97 +10,97 @@ import SkillCard from "./SkillCard";
 
 const skillItem = [
     {
-      imgSrc: '/images/python.svg',
+      imgSrc: './images/python.svg',
       label: 'Python',
       desc: 'Programming Language'
     },
     {
-      imgSrc: '/images/java.svg',
+      imgSrc: './images/java.svg',
       label: 'Java',
       desc: 'Programming Language'
     },
     {
-      imgSrc: '/images/pytorch.svg',
+      imgSrc: './images/pytorch.svg',
       label: 'PyTorch',
       desc: 'Deep Learning Framework'
     },
     {
-      imgSrc: '/images/tensorflow.svg',
+      imgSrc: './images/tensorflow.svg',
       label: 'TensorFlow',
       desc: 'Machine Learning Framework'
     },
     {
-      imgSrc: '/images/html5.svg',
+      imgSrc: './images/html5.svg',
       label: 'HTML5',
       desc: 'Markup Language'
     },
     {
-      imgSrc: '/images/css3.svg',
+      imgSrc: './images/css3.svg',
       label: 'CSS3',
       desc: 'User Interface'
     },
     {
-      imgSrc: '/images/javascript.svg',
+      imgSrc: './images/javascript.svg',
       label: 'JavaScript',
       desc: 'Interaction'
     },
     {
-      imgSrc: '/images/php.svg',
+      imgSrc: './images/php.svg',
       label: 'PHP',
       desc: 'Backend Language'
     },
     {
-      imgSrc: '/images/react.svg',
+      imgSrc: './images/react.svg',
       label: 'React',
       desc: 'JavaScript Framework'
     },
     {
-      imgSrc: '/images/tailwindcss.svg',
+      imgSrc: './images/tailwindcss.svg',
       label: 'TailwindCSS',
       desc: 'CSS Framework'
     },
     {
-      imgSrc: '/images/bootstrap.svg',
+      imgSrc: './images/bootstrap.svg',
       label: 'Bootstrap',
       desc: 'CSS Framework'
     },    
     {
-      imgSrc: '/images/figma.svg',
+      imgSrc: './images/figma.svg',
       label: 'Figma',
       desc: 'Design Tool'
     },
     {
-      imgSrc: '/images/nodejs.svg',
+      imgSrc: './images/nodejs.svg',
       label: 'Node.js',
       desc: 'Web Server'
     },
     {
-      imgSrc: '/images/expressjs.svg',
+      imgSrc: './images/expressjs.svg',
       label: 'Express.js',
       desc: 'Node Framework'
     },
     {
-      imgSrc: '/images/laravel.svg',
+      imgSrc: './images/laravel.svg',
       label: 'Laravel',
       desc: 'PHP Framework'
     },
     {
-      imgSrc: '/images/mysql.svg',
+      imgSrc: './images/mysql.svg',
       label: 'MySQL',
       desc: 'Relational Database'
     },
     {
-      imgSrc: '/images/mongodb.svg',
+      imgSrc: './images/mongodb.svg',
       label: 'MongoDB',
       desc: 'NoSQL Database'
     },
     {
-      imgSrc: '/images/mariadb.svg',
+      imgSrc: './images/mariadb.svg',
       label: 'MariaDB',
       desc: 'Relational Database'
     },
     {
-      imgSrc: '/images/firebase.svg',
+      imgSrc: './images/firebase.svg',
       label: 'Firebase',
       desc: 'Backend-as-a-Service'
     }
