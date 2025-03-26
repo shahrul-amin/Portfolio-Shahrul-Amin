@@ -16,14 +16,15 @@ const ButtonPrimary = ({
     target = '_self',
     label,
     icon,
-    classes
+    classes,
+    onClick
 }) => {
     if(href) {
         return(
             <a 
                 href={href}
                 target={target}
-                className={"btn btn-primary " + classes}
+                className={"btn btn-primary" + classes}
             >
                 {label}
 
@@ -38,7 +39,7 @@ const ButtonPrimary = ({
         )
     } else{
         return(
-            <button className={"btn btn-primary " + classes}>
+            <button className={"btn btn-primary " + classes}  onClick={onClick}>
                 {label}
 
                 {icon ?
@@ -58,7 +59,8 @@ ButtonPrimary.propTypes = {
     href: PropTypes.string,
     target: PropTypes.string,
     icon: PropTypes.string,
-    classes: PropTypes.string
+    classes: PropTypes.string,
+    onClick: PropTypes.func
 }
 
 /**

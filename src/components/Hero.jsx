@@ -7,6 +7,7 @@
  * Components
  */
 import { ButtonPrimary, ButtonOutline } from './Button'
+import { handleDownloadCV } from '../utils/Download'
 import { FaGithub } from "react-icons/fa";
 
 const Hero = () => {
@@ -50,6 +51,10 @@ const Hero = () => {
                     <ButtonPrimary 
                         label="Download CV"
                         icon="download"
+                        onClick={() => handleDownloadCV({
+                            href:"./documents/Shahrul-Amin-CV.pdf", 
+                            download:"Shahrul-Amin-CV.pdf"
+                        })}
                     />
 
                     <ButtonOutline 
