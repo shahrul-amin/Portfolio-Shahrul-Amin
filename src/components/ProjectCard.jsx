@@ -14,21 +14,20 @@ const ProjectCard = ({
     tags,
     projectLink,
     classes
-}) => {
-  return (
-    <div className={"relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors" + classes}>
-        <figure className="img-box aspect-square rounded-lg mb-4 ">
+}) => {  return (
+    <div className={"card relative p-6 group hover:scale-105 transition-all duration-300 cursor-pointer " + classes}>
+        <figure className="img-box aspect-square rounded-2xl mb-6 overflow-hidden glow-effect">
             <img 
                 src={imgSrc} 
                 alt={title}
                 loading="lazy"
-                className="img-cover"
+                className="img-cover transition-transform duration-500 group-hover:scale-110"
             />
         </figure>
 
-        <div className="flex items-center justify-between gap-4">
-            <div>
-                <h3 className="title-1 mb-3">
+        <div className="flex items-start justify-between gap-4">
+            <div className="flex-1">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-slate-100 transition-colors duration-300">
                     {title}
                 </h3>
 
@@ -36,7 +35,9 @@ const ProjectCard = ({
                     {tags.map((label, key) =>(
                         <span
                             key={key}
-                            className="h-8 text-sm text-zinc-400 bg-zinc-50/5 grid items-center px-3 rounded-lg"
+                            className="h-8 text-xs font-medium text-slate-300 bg-white/10 backdrop-blur-sm 
+                            border border-white/10 grid items-center px-3 rounded-xl
+                            group-hover:bg-white/15 group-hover:text-white transition-all duration-300"
                         >
                             {label}
                         </span>
@@ -44,10 +45,11 @@ const ProjectCard = ({
                 </div>
             </div>
 
-            <div className="w-11 h-11 rounded-lg grid place-items-center bg-indigo-400
-            text-zinc-950 shrink-0">
+            <div className="w-12 h-12 rounded-2xl grid place-items-center bg-gradient-to-r from-indigo-500 to-purple-600
+            text-white shrink-0 shadow-lg shadow-indigo-500/25 group-hover:shadow-xl group-hover:shadow-indigo-500/40
+            transition-all duration-300 group-hover:scale-110">
                 <span 
-                    className="material-symbols-rounded"
+                    className="material-symbols-rounded text-lg"
                     aria-hidden="true"
                     >
                         arrow_outward
@@ -58,7 +60,8 @@ const ProjectCard = ({
         <a 
             href={projectLink}
             target="_blank"
-            className="absolute inset-0"
+            className="absolute inset-0 rounded-3xl"
+            aria-label={`View ${title} project`}
         ></a>
 
     </div>

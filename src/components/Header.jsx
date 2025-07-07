@@ -15,17 +15,19 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
-
   return (
-    <header className="fixed top-0 left-0 w-full h-20 flex items-center z-40 bg-gradient-to-b from-zinc-900 to-zinc-900/0">
-      <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md:grid-cols-[1fr, 3fr,1fr]">
+    <header className="fixed top-0 left-0 w-full h-20 flex items-center z-50 
+      bg-gradient-to-b from-slate-950/80 via-slate-900/60 to-transparent 
+      backdrop-blur-2xl border-b border-white/5">
+      <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6">
         <h1>
-          <a href="/" className="logo">
+          <a href="/" className="logo group">
             <img
               src="./images/logo.svg"
-              width={40}
-              height={40}
+              width={45}
+              height={45}
               alt="Shahrul Amin"
+              className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
             />
           </a>
         </h1>
@@ -35,7 +37,7 @@ const Header = () => {
             className="menu-btn md:!hidden" 
             onClick={() => setNavOpen((prev) => !prev)}
           >
-            <span className="material-symbols-rounded">
+            <span className="material-symbols-rounded transition-transform duration-300">
               {navOpen ? "close" : "menu"}
             </span>
           </button>
@@ -44,7 +46,7 @@ const Header = () => {
         </div>
         <a 
           href="#contact" 
-          className="btn btn-secondary max-md:!hidden md:justify-self-end"
+          className="btn btn-secondary max-md:!hidden md:justify-self-end hover:scale-105"
         >
           Contact Me
         </a>

@@ -7,47 +7,54 @@
  * Components
  */
 import { ButtonPrimary, ButtonOutline } from './Button'
-import { handleDownloadCV } from '../utils/Download'
+import handleDownloadCV from '../utils/Download'
 import { FaGithub } from "react-icons/fa";
 
-const Hero = () => {
-  return (
+const Hero = () => {  return (
     <section
         id="home"
-        className="pt-28 lg:pt-36"
+        className="pt-32 lg:pt-40 relative overflow-hidden"
     >
-        <div className="container lg:grid lg:grid-cols-2
-        items-center lg:gap-10">
-            <div>
-                <div className="flex items-center gap-3">
-                    <figure className="img-box w-9 h-9 rounded-lg">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="container lg:grid lg:grid-cols-2 items-center lg:gap-16 relative z-10">
+            <div className="space-y-8">
+                <div className="flex items-center gap-4 group">
+                    <figure className="img-box w-12 h-12 rounded-2xl glow-effect">
                         <img 
                             src="./images/avatar-1.jpg" 
-                            width={40}
-                            height={40}
+                            width={48}
+                            height={48}
                             alt="Shahrul Amin Potrait"
-                            className="img-cover" 
+                            className="img-cover rounded-2xl" 
                         />
                     </figure>
 
-                    <div className="flex items-center gap-1.5 text-zinc-400
-                    text-sm tracking-wide">
-                        <span className="relative w-2 h-2 rounded-full
-                        bg-emerald-400">
+                    <div className="flex items-center gap-2 text-slate-300
+                    text-sm tracking-wide font-medium">
+                        <span className="relative w-3 h-3 rounded-full
+                        bg-emerald-400 shadow-lg shadow-emerald-400/50">
                             <span className="absolute inset-0 rounded-full
                             bg-emerald-400 animate-ping"></span>
                         </span>
-
                         Available for work
                     </div>
                 </div>
 
                 <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] 
-                lg:max-w-[15ch] mt-5 mb-8 lg:mb-10 text-zinc-50">
-                I Design. I Code. <br/>I Create Experiences.
+                lg:max-w-[15ch] text-white">
+                I Design. I Code. <br/>I Create.
                 </h2>
 
-                <div className="flex items-center gap-3">
+                <p className="text-slate-300 text-lg leading-relaxed max-w-[45ch] font-medium">
+                    Figma Designer, Full-stack developer, and AI/ML researcher.
+                </p>
+
+                <div className="flex items-center gap-4 pt-4">
                     <ButtonPrimary 
                         label="Download CV"
                         icon="download"
@@ -64,18 +71,20 @@ const Hero = () => {
                         icon={<FaGithub />}
                     />
                 </div>
-            </div>
-
-            <div className="hidden lg:block">
-                <figure className="w-full max-w-[480px] ml-auto
-                bg-gradient-to-t from-indigo-400 via-25% via-indigo400/40
-                to-65% rounded-[60px] overflow-hidden">
+            </div>            <div className="hidden lg:block relative">
+                <div className="float-element top-10 right-10 w-20 h-20 bg-indigo-500/20 rounded-full blur-xl"></div>
+                <div className="float-element bottom-20 left-10 w-16 h-16 bg-purple-500/20 rounded-full blur-xl delay-1000"></div>
+                
+                <figure className="w-full max-w-[520px] ml-auto glow-effect
+                bg-gradient-to-t from-indigo-500/30 via-indigo-500/10 to-transparent
+                rounded-[80px] overflow-hidden border border-white/10 backdrop-blur-sm
+                shadow-2xl shadow-indigo-500/20">
                     <img 
                         src="./images/hero-banner.png"
                         width={656}
                         height={400} 
                         alt="Shahrul Amin"
-                        className="max-w-[400px] mx-auto" 
+                        className="max-w-[420px] mx-auto transition-transform duration-700 hover:scale-105" 
                     />
                 </figure>
             </div>

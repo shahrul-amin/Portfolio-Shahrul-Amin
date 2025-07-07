@@ -59,104 +59,119 @@ const Contact = () => {
   return (
     <section 
         id="contact"
-        className="section"
+        className="section relative overflow-hidden"
     >
-        <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
-            <div className="mb-12 lg:mb--0 lg:flex lg:flex-col">
-                <h2 className="headline-2 lg:max-w-[12cch] reveal-up">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-16 relative z-10">
+            <div className="mb-16 lg:mb-0 lg:flex lg:flex-col">
+                <h2 className="headline-2 lg:max-w-[12ch] reveal-up">
                     Contact me for collaboration
                 </h2>
 
-                <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch]
-                lg:max-w-[30ch] reveal-up">
+                <p className="text-slate-300 mt-6 mb-12 max-w-[50ch]
+                lg:max-w-[35ch] reveal-up text-lg leading-relaxed font-medium">
                     Reach out today to discuss your project needs and start collaborating on something amazing!
                 </p>
 
-                <div className="flex items-center gap-2 mt-auto">
-                    {socialLinks.map(({href, icon}, key) => (
+                <div className="flex items-center gap-4 mt-auto">
+                    {socialLinks.map(({href, icon, alt}, key) => (
                         <a
                             key={key}
                             href={href}
                             target="_blank"
-                            className="w-12 h-12 grid place-items-center ring-inset ring-2
-                            ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-50
-                            hover:text-zinc-950 active:bg-zinc-50/80 reveal-up"
+                            className="w-14 h-14 grid place-items-center bg-white/5 backdrop-blur-xl
+                            border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white/10
+                            hover:border-white/20 hover:scale-110 active:scale-95 reveal-up
+                            shadow-lg shadow-black/25 group"
+                            aria-label={alt}
                         >
-                            {icon}
+                            <span className="text-slate-300 group-hover:text-white transition-colors duration-300">
+                                {icon}
+                            </span>
                         </a>
                     ))}
                 </div>
             </div>
 
-            <form 
-                action="https://getform.io/f/anlqkkra"
-                method="POST" 
-                className="xl:pl-10 2xl:pl-20"
-            >
-                <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
-                    <div className="mb-4">
-                        <label 
-                            htmlFor="name" 
-                            className="label reveal-up"
-                        >
-                            Name
-                        </label>
-
-                        <input 
-                            type="text" 
-                            name="name"
-                            id="name"
-                            autoComplete="name"
-                            required
-                            placeholder="Your Name" 
-                            className="text-field reveal-up" 
-                        />
-                    </div>
-
-                    <div className="mb-4">
-                        <label 
-                            htmlFor="email" 
-                            className="label reveal-up"
-                        >
-                            Email
-                        </label>
-
-                        <input 
-                            type="email" 
-                            name="email"
-                            id="email"
-                            autoComplete="email"
-                            required
-                            placeholder="youremail@example.com" 
-                            className="text-field reveal-up" 
-                        />
-                    </div>
-                </div>
-
-                <div className="mb-4">
-                    <label 
-                        htmlFor="message" 
-                        className="label reveal-up"
-                    >
-                        Message
-                    </label>
-
-                    <textarea 
-                        name="message" 
-                        id="message"
-                        placeholder="Your message here..."
-                        required 
-                        className="text-field resize-y min-h-32 max-h-80 reveal-up"
-                    ></textarea>
-                </div>
-                
-                <button 
-                    type="submit" 
-                    className="btn btn-primary w-full !max-w-full justify-center reveal-up"
+            <div className="card p-8 xl:p-12">
+                <form 
+                    action="https://getform.io/f/anlqkkra"
+                    method="POST" 
+                    className="space-y-6"
                 >
-                    Send Message
-                </button>
-            </form>
+                    <div className="md:grid md:items-start md:grid-cols-2 md:gap-6">
+                        <div>
+                            <label 
+                                htmlFor="name" 
+                                className="label reveal-up"
+                            >
+                                Name
+                            </label>
+
+                            <input 
+                                type="text" 
+                                name="name"
+                                id="name"
+                                autoComplete="name"
+                                required
+                                placeholder="Your Name" 
+                                className="text-field reveal-up" 
+                            />
+                        </div>
+
+                        <div>
+                            <label 
+                                htmlFor="email" 
+                                className="label reveal-up"
+                            >
+                                Email
+                            </label>
+
+                            <input 
+                                type="email" 
+                                name="email"
+                                id="email"
+                                autoComplete="email"
+                                required
+                                placeholder="youremail@example.com" 
+                                className="text-field reveal-up" 
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label 
+                            htmlFor="message" 
+                            className="label reveal-up"
+                        >
+                            Message
+                        </label>
+
+                        <textarea 
+                            name="message" 
+                            id="message"
+                            placeholder="Your message here..."
+                            required 
+                            className="text-field resize-y min-h-36 max-h-80 reveal-up"
+                        ></textarea>
+                    </div>
+                    
+                    <button 
+                        type="submit" 
+                        className="btn btn-primary w-full !max-w-full justify-center reveal-up group"
+                    >
+                        Send Message
+                        <span className="material-symbols-rounded ml-2 group-hover:translate-x-1 transition-transform duration-300">
+                            send
+                        </span>
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
   )

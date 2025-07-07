@@ -56,11 +56,17 @@ const sitemap = [
 
 const Footer = () => {
   return (
-    <footer className="section">
-        <div className="container">
-            <div className="lg:grid lg:grid-cols-2">
-                <div className="mb-10">
-                    <h2 className="headline-1 mb-8 lg:max-w-[12ch] reveal-up">
+    <footer className="section relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-indigo-500/3 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/3 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container relative z-10">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+                <div className="mb-16 lg:mb-0">
+                    <h2 className="headline-1 mb-8 lg:max-w-[15ch] reveal-up">
                         Let&apos;s work together today!
                     </h2>
 
@@ -72,17 +78,17 @@ const Footer = () => {
                     />
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 lg:pl-20">
+                <div className="grid grid-cols-2 gap-8 lg:gap-12">
                     <div>
-                        <p className="mb-2 reveal-up">Sitemap</p>
+                        <p className="mb-6 reveal-up text-white font-semibold text-lg">Sitemap</p>
 
-                        <ul>
+                        <ul className="space-y-3">
                             {sitemap.map(({label, href}, key) => (
                                 <li key={key}>
                                     <a 
                                     href={href}
-                                    className="block text-sm text-zinc-400 py-1 
-                                    transition-colors hover:text-zinc-200 reveal-up"
+                                    className="block text-sm text-slate-400 
+                                    transition-all duration-300 hover:text-white hover:translate-x-1 reveal-up font-medium"
                                     >
                                         {label}
                                     </a>
@@ -92,16 +98,16 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <p className="mb-2 reveal-up">Socials</p>
+                        <p className="mb-6 reveal-up text-white font-semibold text-lg">Socials</p>
 
-                        <ul>
+                        <ul className="space-y-3">
                             {socials.map(({label, href}, key) => (
                                 <li key={key}>
                                     <a 
                                     href={href}
                                     target="_blank"
-                                    className="block text-sm text-zinc-400 py-1 
-                                    transition-colors hover:text-zinc-200 reveal-up"
+                                    className="block text-sm text-slate-400 
+                                    transition-all duration-300 hover:text-white hover:translate-x-1 reveal-up font-medium"
                                     >
                                         {label}
                                     </a>
@@ -112,21 +118,22 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="flex items-center justify-between pt-10 mb-8">
+            <div className="flex items-center justify-between pt-16 pb-8 border-t border-white/10 mt-16">
                 <a 
                     href="/" 
-                    className="logo reveal-up"
+                    className="logo reveal-up group"
                 >
                     <img 
                         src="./images/logo.svg"
-                        width={40}
-                        height={40} 
+                        width={45}
+                        height={45} 
                         alt="Logo"
+                        className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
                     />
                 </a>
 
-                <p className="text-zinc-500 text-sm reveal-up">
-                    &copy; 2025 <span className="text-zinc-200">shahrul-amin</span>
+                <p className="text-slate-400 text-sm reveal-up font-medium">
+                    &copy; 2025 <span className="text-white font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">shahrul-amin</span>
                 </p>
             </div>
         </div>

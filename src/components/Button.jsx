@@ -24,12 +24,12 @@ const ButtonPrimary = ({
             <a 
                 href={href}
                 target={target}
-                className={"btn btn-primary" + classes}
+                className={"btn btn-primary group " + classes}
             >
                 {label}
 
                 {icon ?
-                    <span className="material-symbols-rounded"
+                    <span className="material-symbols-rounded transition-transform duration-300 group-hover:translate-x-1"
                     aria-hidden="true">
                         {icon}
                     </span>
@@ -39,11 +39,11 @@ const ButtonPrimary = ({
         )
     } else{
         return(
-            <button className={"btn btn-primary " + classes}  onClick={onClick}>
+            <button className={"btn btn-primary group " + classes}  onClick={onClick}>
                 {label}
 
                 {icon ?
-                    <span className="material-symbols-rounded"
+                    <span className="material-symbols-rounded transition-transform duration-300 group-hover:translate-x-1"
                     aria-hidden="true">
                         {icon}
                     </span>
@@ -78,12 +78,12 @@ const ButtonOutline = ({
             <a 
                 href={href}
                 target={target}
-                className={"btn btn-outline " + classes}
+                className={"btn btn-outline group " + classes}
             >
                 {label}
 
                 {icon ?
-                    <span className="material-symbols-rounded"
+                    <span className="text-lg transition-transform duration-300 group-hover:scale-110"
                     aria-hidden="true">
                         {icon}
                     </span>
@@ -93,11 +93,11 @@ const ButtonOutline = ({
         )
     } else{
         return(
-            <button className={"btn btn-outline " + classes}>
+            <button className={"btn btn-outline group " + classes}>
                 {label}
 
                 {icon ?
-                    <span className="material-symbols-rounded"
+                    <span className="text-lg transition-transform duration-300 group-hover:scale-110"
                     aria-hidden="true">
                         {icon}
                     </span>

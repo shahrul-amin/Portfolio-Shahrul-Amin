@@ -7,29 +7,37 @@ html {
 }
 
 body {
-  @apply bg-zinc-900 text-zinc-50
+  @apply bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-zinc-50 min-h-screen;
+  background-attachment: fixed;
 }
 
 /* === TYPOGRAPHY === */
 .headline-1, .headline-2{
   @apply max-w-max;
-  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #94a3b8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .headline-1{
-  @apply text-5xl leading-tight font-semibold lg:text-[55px]
-  lg:leading-[1.15]
+  @apply text-5xl leading-tight font-bold lg:text-[60px]
+  lg:leading-[1.1] tracking-tight
 }
 
 .headline-2{
-  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+  @apply text-3xl lg:text-[42px] lg:leading-[1.2] font-bold tracking-tight
 }
 
 .title-1{
-  @apply text-[22px] font-normal
+  @apply text-[22px] font-medium tracking-wide
 }
 
 /* === UTILITIES === */
@@ -43,37 +51,49 @@ body {
 }
 
 .img-box{
-  @apply bg-zinc-700 overflow-hidden
+  @apply bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden
+  shadow-2xl shadow-slate-900/50
 }
 
 .img-cover{
-  @apply w-full h-full object-cover
+  @apply w-full h-full object-cover transition-transform duration-500 hover:scale-110
 }
 
 .section{
-  @apply pt-20 lg:pt-32 
+  @apply pt-24 lg:pt-40 relative
+}
+
+.section::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/5 to-transparent pointer-events-none;
 }
 
 .reveal-up{
-  @apply translate-y-20 opacity-0
+  @apply translate-y-8 opacity-0
 }
 
 /* === COMPONENTS === */
 /* Menu btn */
 .menu-btn {
-  @apply w-10 h-10 grid place-items-center bg-zinc-50/10
-  rounded-xl ring-inset ring-1 ring-zinc-50/[0.02]
-  backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,background-color]
-  active:scale-95
+  @apply w-12 h-12 grid place-items-center bg-white/5
+  rounded-2xl ring-1 ring-white/10 border border-white/5
+  backdrop-blur-xl hover:bg-white/10 transition-all duration-300
+  active:scale-95 shadow-lg shadow-black/25
+}
+
+.menu-btn:hover {
+  @apply shadow-xl shadow-indigo-500/20;
 }
 
 /* Navbar */
 .navbar {
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2
-  bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5
-  scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter]
+  @apply absolute top-full mt-3 right-0 min-w-48 p-3
+  bg-white/5 rounded-3xl ring-1 ring-white/10 border border-white/5
+  backdrop-blur-2xl scale-90 blur-sm opacity-0 invisible 
+  transition-all duration-300 ease-out
   md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-none md:scale-100
-  md:visible
+  md:visible md:bg-transparent md:ring-0 md:border-0 md:backdrop-blur-none
+  shadow-2xl shadow-black/25
 }
 
 .navbar.active{
@@ -81,58 +101,130 @@ body {
 }
 
 .nav-link {
-  @apply grid items-center h-9 px-4 text-sm font-medium
-  tracking-wide text-zinc-50/50 hover:text-zinc-50
-  transition-colors
+  @apply grid items-center h-11 px-5 text-sm font-medium
+  tracking-wide text-zinc-300 hover:text-white rounded-xl
+  transition-all duration-300 relative overflow-hidden
+}
+
+.nav-link::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 
+  translate-x-[-100%] transition-transform duration-300;
+}
+
+.nav-link:hover::before {
+  @apply translate-x-0;
 }
 
 .nav-link.active{
-  @apply text-zinc-900 duration-500
+  @apply text-slate-900 duration-300 bg-gradient-to-r from-white to-slate-100
+  font-semibold shadow-lg shadow-black/25
 }
 
 .navbar .active-box{
-  @apply absolute  bg-zinc-50 rounded-lg -z-10 transition-[top,left] duration-500
+  @apply absolute rounded-xl -z-10 transition-all duration-500
+  bg-gradient-to-r from-white to-slate-100 shadow-lg shadow-black/25
 }
 
 /* Button */
 .btn{
-  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium
-  text-sm ring-1 ring-zinc-50/5 ring-inset transition-[bakground-color]
+  @apply max-w-max h-12 flex items-center gap-3 px-6 rounded-2xl font-semibold
+  text-sm ring-1 ring-white/10 ring-inset transition-all duration-300
+  shadow-lg shadow-black/25 relative overflow-hidden
+}
+
+.btn::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-white/5 to-transparent 
+  translate-x-[-100%] transition-transform duration-300;
+}
+
+.btn:hover::before {
+  @apply translate-x-0;
 }
 
 .btn-secondary{
-  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80
+  @apply bg-gradient-to-r from-white to-slate-100 text-slate-900 
+  hover:from-slate-100 hover:to-white active:scale-95
+  font-bold shadow-xl shadow-black/30
 }
 
 .btn .material-symbols-rounded{
-  @apply text-[18px]
+  @apply text-[20px]
 }
 
 .btn:has( .material-symbols-rounded){
-  @apply pr-3
+  @apply pr-4
 }
 
 .btn-primary{
-  @apply h-11 bg-indigo-400 text-zinc-950 hover:bg-indigo-300
-  active:bg-indigo-400
+  @apply h-12 bg-gradient-to-r from-indigo-500 to-purple-600 text-white 
+  hover:from-indigo-400 hover:to-purple-500 active:scale-95
+  font-bold shadow-xl shadow-indigo-500/30 border border-indigo-400/50
+}
+
+.btn-primary:hover {
+  @apply shadow-2xl shadow-indigo-500/40;
 }
 
 .btn-outline{
-  @apply h-10 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800 
-  transition-transform transform hover:scale-115
+  @apply h-12 bg-white/5 border border-white/10 text-white
+  hover:bg-white/10 hover:border-white/20 active:scale-95 
+  transition-all duration-300 backdrop-blur-xl
+  shadow-lg shadow-black/25
+}
+
+.btn-outline:hover {
+  @apply shadow-xl shadow-indigo-500/20;
 }
 
 /* Text Field */
 .label{
-  @apply block text-zinc-200 text-sm font-normal mb-2
+  @apply block text-slate-200 text-sm font-semibold mb-3 tracking-wide
 }
 
 .text-field{
-  @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800
-  rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-zinc-50/5
-  focus:ring-indigo-400 focus:ring-2
+  @apply block outline-none w-full px-4 py-4 text-sm bg-white/5
+  rounded-2xl ring-1 ring-white/10 border border-white/5 backdrop-blur-xl
+  transition-all duration-300 hover:ring-white/20 hover:bg-white/10
+  focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500/50
+  shadow-lg shadow-black/25
 }
 
 .text-field::placeholder{
-  @apply text-zinc-400
+  @apply text-slate-400 font-medium
+}
+
+.text-field:focus {
+  @apply shadow-xl shadow-indigo-500/20;
+}
+
+/* Modern card styles */
+.card {
+  @apply bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10
+  shadow-2xl shadow-black/25 transition-all duration-300
+  hover:bg-white/10 hover:border-white/20 hover:shadow-2xl hover:shadow-black/40
+}
+
+/* Floating elements */
+.float-element {
+  @apply absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+/* Glow effects */
+.glow-effect {
+  @apply relative;
+}
+
+.glow-effect::before {
+  content: '';
+  @apply absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 
+  rounded-3xl opacity-20 blur-xl animate-pulse;
+  z-index: -1;
 }
