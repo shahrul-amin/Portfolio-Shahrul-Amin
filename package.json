@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vercel dev",
+    "dev": "vite",
+    "dev:api": "vercel dev",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -20,7 +21,6 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "shahrul-amin": "file:",
     "tailwind-scrollbar": "^4.0.1",
     "tailwindcss": "^4.0.9"
   },
