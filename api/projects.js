@@ -19,5 +19,12 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: error.message });
   }
 
-  res.status(200).json(data);
+  const transformedProjects = data.map(project => ({
+    imgSrc: project.img_src,
+    title: project.title,
+    tags: project.tags,
+    projectLink: project.project_link
+  }));
+
+  res.status(200).json(transformedProjects);
 }
