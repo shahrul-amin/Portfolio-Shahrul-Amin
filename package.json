@@ -2,19 +2,18 @@
   "name": "shahrul-amin",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://shahrul-amin.github.io/Portfolio-Shahrul-Amin",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "dev": "vercel dev",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@supabase/supabase-js": "^2.95.3",
     "@tailwindcss/vite": "^4.0.9",
+    "dotenv": "^17.2.4",
     "gsap": "^3.12.7",
     "lenis": "^1.2.3",
     "prop-types": "^15.8.1",

@@ -1,53 +1,13 @@
-/**
- * @copyrights 2025 shahrul-amin
- * @license Apache-2.0 
- */
-
-/**
- * Components
- */
+import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard.jsx";
-
-const works = [
-    {
-      imgSrc: './images/project/project-1.jpg',
-      title: 'Continual Object Detection',
-      tags: ['Object Detection', 'PyTorch', 'Incremental Learning'],
-      projectLink: 'https://github.com/shahrul-amin/Continual_Object_Detection'
-    },
-    {
-      imgSrc: './images/project/project-2.jpg',
-      title: 'Vehicle Counting Using YOLOv3 and SORT',
-      tags: ['Computer Vision', 'YOLO', 'Deep Learning'],
-      projectLink: 'https://github.com/shahrul-amin/Vehicle-Counting-Using-YOLOv3-and-SORT'
-    },
-    {
-      imgSrc: './images/project/project-3.jpg',
-      title: 'Portfolio Website',
-      tags: ['Web Development', 'ReactJS', 'Tailwind CSS'],
-      projectLink: 'https://github.com/shahrul-amin/Portfolio-Shahrul-Amin'
-    },
-    {
-      imgSrc: './images/project/project-4.jpg',
-      title: 'Cookies World Website',
-      tags: ['Web Development', 'Web Design', 'Databases'],
-      projectLink: 'https://github.com/shahrul-amin/Cookies-World-Website'
-    },
-    {
-      imgSrc: './images/project/project-5.jpg',
-      title: 'Top Pantry UI Design',
-      tags: ['Graphical User Interface', 'Prototyping', 'User Experience'],
-      projectLink: 'https://www.figma.com/community/file/1396361792966880290/top-pantry'
-    },
-    {
-      imgSrc: './images/project/project-6.jpg',
-      title: 'Data Science Agent (Datagent)',
-      tags: ['Flask', 'Gemini API', 'IndexDB'],
-      projectLink: 'https://github.com/shahrul-amin/Datagent'
-    }
-  ];  
+import ApiService from "../services/ApiService.js";
 
 const Work = () => {
+  const [works, setWorks] = useState([]);
+
+  useEffect(() => {
+    ApiService.getProjects().then(setWorks);
+  }, []);
   return (
     <section 
         id="work"
