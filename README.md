@@ -1,80 +1,98 @@
-# Shahrul Amin - Portfolio
+# Portfolio - Shahrul Amin
 
-A modern, responsive portfolio website showcasing my work as an AI Researcher and Full-Stack Developer.
+Modern portfolio website with dynamic content management, featuring serverless architecture and database integration.
 
-## Features
+## Technology Stack
 
-- **Modern Design**: Glass-morphism effects, gradient backgrounds, and smooth animations
-- **Responsive Layout**: Optimized for all device sizes
-- **Interactive Navigation**: Smooth scroll
-- **Project Showcase**: Highlights of my best work in AI and web development
-- **Contact Form**: Integrated contact form for collaboration inquiries
-- **Performance Optimized**: Built with React and Vite for fast loading
+### Frontend
 
-## Built With
+- React 19.0.0
+- Vite 6.4.1
+- TailwindCSS 4.0.9
+- GSAP 3.12.7
+- Lenis (smooth scroll)
 
-- **React** - Frontend framework
-- **Vite** - Build tool and development server
-- **Tailwind CSS** - Utility-first CSS framework
-- **GSAP** - Animation library
-- **Lenis** - Smooth scroll library
+### Backend
 
-## Getting Started
+- Vercel Serverless Functions
+- Supabase PostgreSQL
+- RESTful API architecture
+
+## Installation
 
 ### Prerequisites
-- Node.js (v16 or higher)
+
+- Node.js 18+
 - npm or yarn
 
-### Installation
+### Setup
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/shahrul-amin/Portfolio-Shahrul-Amin.git
-```
-
-2. Navigate to the project directory
-```bash
 cd Portfolio-Shahrul-Amin
 ```
 
-3. Install dependencies
+2. Install dependencies
+
 ```bash
 npm install
 ```
 
-4. Start the development server
+3. Create environment file
+
+```bash
+cp .env.example .env.local
+```
+
+4. Configure environment variables in `.env.local`
+
+```env
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+5. Run development server
+
 ```bash
 npm run dev
 ```
 
-5. Open your browser and visit local host stated in the terminal
+For full-stack development with API routes:
 
-## Sections
-
-- **Home** - Introduction and hero section
-- **About** - Personal background and experience
-- **Skills** - Technical skills and tools
-- **Work** - Portfolio of projects
-- **Contact** - Get in touch form
+```bash
+npm run dev:api
+```
 
 ## Deployment
 
-Build the project for production:
+### Vercel
+
+1. Push changes to GitHub
+2. Import project in Vercel dashboard
+3. Configure environment variables in Vercel project settings
+4. Deploy automatically on push to main branch
+
+### Build locally
+
 ```bash
 npm run build
 ```
 
-Deploy to GitHub Pages:
-```bash
-npm run deploy
-```
+## Environment Variables
+
+Required for production deployment:
+
+- `SUPABASE_URL` - Supabase project URL
+- `SUPABASE_ANON_KEY` - Supabase anonymous key
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+Apache License 2.0 - See [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-Shahrul Amin - [shahrulamin8776@gmail.com](mailto:shahrulamin8776@gmail.com)
-
-Project Link: [https://github.com/shahrul-amin/Portfolio-Shahrul-Amin](https://github.com/shahrul-amin/Portfolio-Shahrul-Amin)
+Shahrul Amin  
+Email: shahrulamin8776@gmail.com
+GitHub: [@shahrul-amin](https://github.com/shahrul-amin)
