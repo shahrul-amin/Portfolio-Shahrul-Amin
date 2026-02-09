@@ -9,11 +9,16 @@ const Work = () => {
   useEffect(() => {
     ApiService.getProjects().then((data) => {
       setWorks(data);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (works.length > 0) {
       setTimeout(() => {
         ScrollTrigger.refresh();
       }, 100);
-    });
-  }, []);
+    }
+  }, [works]);
   return (
     <section 
         id="work"
