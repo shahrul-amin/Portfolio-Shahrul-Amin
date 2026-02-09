@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard.jsx";
 import ApiService from "../services/ApiService.js";
-import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -17,26 +14,6 @@ const Work = () => {
       }, 100);
     });
   }, []);
-
-  useEffect(() => {
-    if (works.length > 0) {
-      const cards = document.querySelectorAll('#work .reveal-up');
-      cards.forEach((card) => {
-        gsap.to(card, {
-          scrollTrigger: {
-            trigger: card,
-            start: '-200 bottom',
-            end: 'bottom 80%',
-            scrub: true,
-          },
-          y: 0,
-          ease: 'power2.out',
-          opacity: 1,
-          duration: 1,
-        });
-      });
-    }
-  }, [works]);
   return (
     <section 
         id="work"

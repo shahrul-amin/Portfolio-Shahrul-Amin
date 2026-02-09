@@ -14,10 +14,6 @@ const Skill = () => {
   }, []);
 
   useEffect(() => {
-    ApiService.getSkills().then(setSkillGroups);
-  }, []);
-
-  useEffect(() => {
     if (skillsGridRef.current) {
       const cards = skillsGridRef.current.querySelectorAll('.skill-card');
       
