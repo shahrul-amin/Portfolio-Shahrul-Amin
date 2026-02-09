@@ -15,7 +15,7 @@ const ProjectCard = ({
     projectLink,
     classes
 }) => {  return (
-    <div className={"card relative p-6 group hover:scale-105 transition-all duration-300 cursor-pointer " + classes}>
+    <div className={"card relative p-6 group transition-all duration-300 cursor-pointer " + classes}>
         <figure className="img-box aspect-square rounded-2xl mb-6 overflow-hidden glow-effect">
             <img 
                 src={imgSrc} 

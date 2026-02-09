@@ -33,7 +33,7 @@ body {
 }
 
 .headline-2{
-  @apply text-3xl lg:text-[42px] lg:leading-[1.2] font-bold tracking-tight
+  @apply text-3xl lg:text-[42px] lg:leading-[1.3] font-bold tracking-tight
 }
 
 .title-1{

@@ -14,7 +14,7 @@ const SkillCard = ({
     desc,
     classes
 }) => {  return (
-    <div className={'card flex items-center gap-4 p-5 group hover:scale-105 transition-all duration-300 ' + classes}>
+    <div className={'card flex items-center gap-4 p-5 group transition-all duration-300 ' + classes}>
         <figure className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl 
         overflow-hidden w-16 h-16 p-3 group-hover:from-indigo-500/20 group-hover:to-purple-500/20
         transition-all duration-300 shadow-lg shadow-black/25 flex items-center justify-center">
