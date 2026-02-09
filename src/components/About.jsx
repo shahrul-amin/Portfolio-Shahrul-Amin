@@ -25,11 +25,11 @@ const About = () => {  return (
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
                   <p className="text-slate-200 mb-8 md:mb-12 md:text-xl leading-relaxed
                 md:max-w-[60ch] font-medium relative z-10">
-                    Welcome! I&apos;m <span className="font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Shahrul Amin</span>, an AI Researcher and Software Developer. 
-                    I have experience building machine learning models using scikit-learn, PyTorch 
-                    and TensorFlow. I also design using Figma and develop front-end web applications 
-                    using ReactJS and Flutter. Additionally, I have expertise in backend development 
-                    using Flask, Apache, MongoDB, Supabase, and Firebase.
+                    Welcome! I&apos;m <span className="font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Shahrul Amin</span>, an AI Researcher and FullStack Developer. 
+                    I have experience in building machine learning models using scikit-learn, PyTorch and TensorFlow. 
+                    I also design user interfaces using Figma and develop it using ReactJS or Flutter framework. 
+                    Additionally, I have expertise in backend development using Flask, Laravel, and Apache. For 
+                    database management, I use MariaDB, MongoDB Compass, Supabase, and Firebase.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-8
