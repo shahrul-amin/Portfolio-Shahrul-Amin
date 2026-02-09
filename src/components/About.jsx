@@ -10,7 +10,7 @@ const aboutItems = [
     },
     {
       label: 'Years of experience',
-      number: 3
+      number: 4
     }
   ];
 
