@@ -66,7 +66,7 @@ const Footer = () => {
         <div className="container relative z-10">
             <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="mb-16 lg:mb-0">
-                    <h2 className="headline-1 mb-8 lg:max-w-[15ch] reveal-up">
+                    <h2 className="headline-1 mb-8 lg:max-w-[15ch]">
                         Let&apos;s work together today!
                     </h2>
 
@@ -74,13 +74,13 @@ const Footer = () => {
                         href="mailto:shahrulamin8776@gmail.com"
                         label="Start project"
                         icon="chevron_right"
-                        classes="reveal-up"
+                        classes=""
                     />
                 </div>
 
                 <div className="grid grid-cols-2 gap-8 lg:gap-12">
                     <div>
-                        <p className="mb-6 reveal-up text-white font-semibold text-lg">Sitemap</p>
+                        <p className="mb-6 text-white font-semibold text-lg">Sitemap</p>
 
                         <ul className="space-y-3">
                             {sitemap.map(({label, href}, key) => (
@@ -88,7 +88,7 @@ const Footer = () => {
                                     <a 
                                     href={href}
                                     className="block text-sm text-slate-400 
-                                    transition-all duration-300 hover:text-white hover:translate-x-1 reveal-up font-medium"
+                                    transition-all duration-300 hover:text-white hover:translate-x-1 font-medium"
                                     >
                                         {label}
                                     </a>
@@ -98,7 +98,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <p className="mb-6 reveal-up text-white font-semibold text-lg">Socials</p>
+                        <p className="mb-6 text-white font-semibold text-lg">Socials</p>
 
                         <ul className="space-y-3">
                             {socials.map(({label, href}, key) => (
@@ -107,7 +107,7 @@ const Footer = () => {
                                     href={href}
                                     target="_blank"
                                     className="block text-sm text-slate-400 
-                                    transition-all duration-300 hover:text-white hover:translate-x-1 reveal-up font-medium"
+                                    transition-all duration-300 hover:text-white hover:translate-x-1 font-medium"
                                     >
                                         {label}
                                     </a>
@@ -121,7 +121,7 @@ const Footer = () => {
             <div className="flex items-center justify-between pt-16 pb-8 border-t border-white/10 mt-16">
                 <a 
                     href="/" 
-                    className="logo reveal-up group"
+                    className="logo group"
                 >
                     <img 
                         src="./images/logo.svg"
@@ -132,7 +132,7 @@ const Footer = () => {
                     />
                 </a>
 
-                <p className="text-slate-400 text-sm reveal-up font-medium">
+                <p className="text-slate-400 text-sm font-medium">
                     &copy; 2025 <span className="text-white font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">shahrul-amin</span>
                 </p>
             </div>

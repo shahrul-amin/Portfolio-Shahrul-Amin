@@ -43,17 +43,17 @@ const Skill = () => {
         </div>
 
         <div className="container relative z-10">
-            <h2 className="headline-2 reveal-up text-center lg:text-left">
+            <h2 className="headline-2 text-center lg:text-left">
                 Essential Tools I use
             </h2>
 
-            <p className="text-slate-300 mt-6 mb-8 max-w-[55ch] reveal-up text-lg leading-relaxed font-medium text-center lg:text-left">
+            <p className="text-slate-300 mt-6 mb-8 max-w-[55ch] text-lg leading-relaxed font-medium text-center lg:text-left">
                 Discover the powerful tools and technologies I leverage to
                 create high-performing, exceptional websites, applications, and AI models. 
             </p>
 
             {/* Category Tabs */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8 reveal-up">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
                 {categories.map((category) => (
                     <button
                         key={category}

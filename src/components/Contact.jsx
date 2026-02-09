@@ -69,12 +69,12 @@ const Contact = () => {
 
         <div className="container lg:grid lg:grid-cols-2 lg:items-stretch lg:gap-16 relative z-10">
             <div className="mb-16 lg:mb-0 lg:flex lg:flex-col">
-                <h2 className="headline-2 lg:max-w-[12ch] reveal-up">
+                <h2 className="headline-2 lg:max-w-[12ch]">
                     Contact me for collaboration
                 </h2>
 
                 <p className="text-slate-300 mt-6 mb-12 max-w-[50ch]
-                lg:max-w-[35ch] reveal-up text-lg leading-relaxed font-medium">
+                lg:max-w-[35ch] text-lg leading-relaxed font-medium">
                     Reach out today to discuss your project needs and start collaborating on something amazing!
                 </p>
 
@@ -86,7 +86,7 @@ const Contact = () => {
                             target="_blank"
                             className="w-14 h-14 grid place-items-center bg-white/5 backdrop-blur-xl
                             border border-white/10 rounded-2xl transition-all duration-300 hover:bg-white/10
-                            hover:border-white/20 hover:scale-110 active:scale-95 reveal-up
+                            hover:border-white/20 hover:scale-110 active:scale-95
                             shadow-lg shadow-black/25 group"
                             aria-label={alt}
                         >
@@ -108,7 +108,7 @@ const Contact = () => {
                         <div>
                             <label 
                                 htmlFor="name" 
-                                className="label reveal-up"
+                                className="label"
                             >
                                 Name
                             </label>
@@ -120,14 +120,14 @@ const Contact = () => {
                                 autoComplete="name"
                                 required
                                 placeholder="Your Name" 
-                                className="text-field reveal-up" 
+                                className="text-field" 
                             />
                         </div>
 
                         <div>
                             <label 
                                 htmlFor="email" 
-                                className="label reveal-up"
+                                className="label"
                             >
                                 Email
                             </label>
@@ -139,7 +139,7 @@ const Contact = () => {
                                 autoComplete="email"
                                 required
                                 placeholder="youremail@example.com" 
-                                className="text-field reveal-up" 
+                                className="text-field" 
                             />
                         </div>
                     </div>
@@ -157,13 +157,13 @@ const Contact = () => {
                             id="message"
                             placeholder="Your message here..."
                             required 
-                            className="text-field resize-y min-h-36 max-h-80 reveal-up"
+                            className="text-field resize-y min-h-36 max-h-80"
                         ></textarea>
                     </div>
                     
                     <button 
                         type="submit" 
-                        className="btn btn-primary w-full !max-w-full justify-center reveal-up group"
+                        className="btn btn-primary w-full !max-w-full justify-center group"
                     >
                         Send Message
                         <span className="material-symbols-rounded ml-2 group-hover:translate-x-1 transition-transform duration-300">

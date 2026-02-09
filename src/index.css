@@ -68,10 +68,6 @@ body {
   @apply absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/5 to-transparent pointer-events-none;
 }
 
-.reveal-up{
-  @apply translate-y-8 opacity-0
-}
-
 /* === COMPONENTS === */
 /* Menu btn */
 .menu-btn {

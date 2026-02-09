@@ -1,24 +1,13 @@
 import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard.jsx";
 import ApiService from "../services/ApiService.js";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Work = () => {
   const [works, setWorks] = useState([]);
 
   useEffect(() => {
-    ApiService.getProjects().then((data) => {
-      setWorks(data);
-    });
+    ApiService.getProjects().then(setWorks);
   }, []);
-
-  useEffect(() => {
-    if (works.length > 0) {
-      setTimeout(() => {
-        ScrollTrigger.refresh();
-      }, 100);
-    }
-  }, [works]);
   return (
     <section 
         id="work"
@@ -31,7 +20,7 @@ const Work = () => {
         </div>
 
         <div className="container relative z-10">
-            <h2 className="headline-2 mb-12 reveal-up text-center lg:text-left">
+            <h2 className="headline-2 mb-12 text-center lg:text-left">
                 My portfolio highlights
             </h2>
 
@@ -44,7 +33,7 @@ const Work = () => {
                         title={title}
                         tags={tags}
                         projectLink={projectLink}
-                        classes="reveal-up"
+                        classes=""
                     />
                 ))}
             </div>

@@ -20,7 +20,7 @@ const About = () => {  return (
         className="section"
     >
         <div className="container">
-            <div className="card p-8 md:p-16 reveal-up relative overflow-hidden">
+            <div className="card p-8 md:p-16 relative overflow-hidden">
                 {/* Background decorative element */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
                   <p className="text-slate-200 mb-8 md:mb-12 md:text-xl leading-relaxed
