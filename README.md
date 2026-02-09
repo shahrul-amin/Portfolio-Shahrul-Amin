@@ -93,6 +93,6 @@ Apache License 2.0 - See [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-Shahrul Amin  
-Email: shahrulamin8776@gmail.com
-GitHub: [@shahrul-amin](https://github.com/shahrul-amin)
+Reach out to me:
+- Email: shahrulamin8776@gmail.com
+- GitHub: [@shahrul-amin](https://github.com/shahrul-amin)
